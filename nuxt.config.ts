@@ -4,5 +4,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
    nitro: {
     preset: 'node-server' // 或根据 EdgeOne 要求调整
-  }
+  },
+   app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
+    head: {
+      title: 'Nuxt4 EdgeOne App',
+      htmlAttrs: { lang: 'zh' }
+    }
+  },
+  typescript: {
+    typeCheck: true
+  },
+  
 })
